@@ -48,7 +48,7 @@ class Player:
                 return points
         return points
 
-    def __possible_points__(self):  # do ogarnięcia
+    def __possible_points__(self):
         points = sum(c.points for c in self.hand if c.rank != "Ace") + int(self.aces)
         return " [" + str(points) + ("/" + str(points+10) if self.aces >0 and points+10 <= 21 else "") + "]"
 
